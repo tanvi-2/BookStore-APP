@@ -1,0 +1,14 @@
+{
+    "builds": [
+      {
+        "src": "fronten/package.json",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "fronten/dist"
+        }
+      }
+    ],
+    "routes": [
+      { "src": "/(.*)", "dest": "fronten/$1" }
+    ]
+  }

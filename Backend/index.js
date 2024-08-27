@@ -20,7 +20,8 @@ const PORT = process.env.PORT || 4001;
 //console.log('MongoDB URI:', URI);
 
 // Connect to MongoDB
-const URI = "mongodb://localhost:27017/bookStore";
+
+const URI = "mongodb+srv://tanvigupta836:GXIF7Ni2pP7bJZHn@cluster0.iieny2z.mongodb.net/";
 mongoose.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('MongoDB connected...'))
     .catch(err => console.log('MongoDB connection error:', err));
