@@ -10,7 +10,7 @@ dotenv.config(); // Load environment variables
 
 const app = express();
 
-app.use(cors());
+app.use(cors("https://bookstore-app-17.onrender.com/"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 
