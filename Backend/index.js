@@ -5,7 +5,7 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import bookRoute from "./route/book.route.js";
 import userRoute from "./route/user.route.js";
-
+import path from "path";
 dotenv.config(); // Load environment variables
 
 const app = express();
@@ -14,7 +14,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 
-const PORT = process.env.PORT || 4001;
+const PORT = process.env.PORT || 1000;
 //const URI = process.env.MONGO_URI;
 
 //console.log('MongoDB URI:', URI);
