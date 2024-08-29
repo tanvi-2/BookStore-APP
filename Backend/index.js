@@ -10,18 +10,18 @@ dotenv.config(); // Load environment variables
 
 const app = express();
 
-app.use(cors("https://bookstore-app-17.onrender.com/"));
+app.use(cors("http://localhost:5173/"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 
-const PORT = process.env.PORT || 1000;
+const PORT = process.env.PORT || 5000;
 //const URI = process.env.MONGO_URI;
 
 //console.log('MongoDB URI:', URI);
 
 // Connect to MongoDB
 
-const URI = "mongodb+srv://tanvigupta836:GXIF7Ni2pP7bJZHn@cluster0.iieny2z.mongodb.net/";
+
 mongoose.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('MongoDB connected...'))
     .catch(err => console.log('MongoDB connection error:', err));
